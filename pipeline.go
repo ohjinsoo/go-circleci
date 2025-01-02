@@ -13,7 +13,7 @@ type Pipelines interface {
 	Get(ctx context.Context, pipelineID string) (*Pipeline, error)
 	GetConfig(ctx context.Context, pipelineID string) (*PipelineConfig, error)
 	ListWorkflows(ctx context.Context, pipelineID string, options PipelineListWorkflowsOptions) (*WorkflowList, error)
-	ListProjectPipelines(ctx context.Context, options PipelineListOptions) (*PipelineList, error)
+	ListProjectPipelines(ctx context.Context, options ProjectPipelinesListOptions) (*PipelineList, error)
 }
 
 type pipelines struct {
